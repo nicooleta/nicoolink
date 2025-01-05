@@ -19,6 +19,8 @@
 }
 
 body {
+    background: url(https://i.postimg.cc/Cdy6jLHZ/backdrop-nl-1.webp) no-repeat center center fixed;
+    background-size: cover;
     font-family: var(--body-font);
     background-color: var(--primary-color);
     color: var(--light-color);
