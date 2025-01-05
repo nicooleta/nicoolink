@@ -19,7 +19,7 @@
 }
 
 body {
-     background: url(https://i.postimg.cc/Cdy6jLHZ/backdrop-nl-1.webp) no-repeat center center fixed;
+   background: url(https://i.postimg.cc/6qDnq8VP/Backdrop-2.jpg) no-repeat center center fixed;
     background-size: cover;
     font-family: var(--body-font);
     background-color: var(--primary-color);
@@ -133,12 +133,12 @@ nav a:hover {
 }
 
 .gallery-item {
-     background-color: #1f1f1f;
-    border: 2px solid var(--accent-color);
+    background-color: #1f1f1f;
+    border: 6px solid var(--accent-color);
     border-radius: 5px;
     overflow: hidden;
-    width: 250px; /* Smaller width */
-    aspect-ratio: 4 / 5; /* Maintain the same aspect ratio */
+    width: 100%;
+    aspect-ratio: 4 / 5;
     cursor: pointer;
 }
 
