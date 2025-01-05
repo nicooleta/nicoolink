@@ -19,7 +19,7 @@
 }
 
 body {
-    background: url(https://i.postimg.cc/Cdy6jLHZ/backdrop-nl-1.webp) no-repeat center center fixed;
+     background: url(https://i.postimg.cc/Cdy6jLHZ/backdrop-nl-1.webp) no-repeat center center fixed;
     background-size: cover;
     font-family: var(--body-font);
     background-color: var(--primary-color);
@@ -123,10 +123,13 @@ nav a:hover {
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1.5rem;
+   display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem; /* Space between items */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (if there's extra space) */
+    margin: 0 auto; /* Center the grid on the page */
+    max-width: 70%; /* Optional: Adjust maximum width */
 }
 
 .gallery-item {
