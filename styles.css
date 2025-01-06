@@ -181,7 +181,7 @@ nav a:hover {
 }
 
 /* ====== RESPONSIVE DESIGN FOR GALLERY ITEM ====== */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .gallery-item {
         width: 200px; /* Adjusted width for smaller screens */
         height: 280px; /* Adjusted height for smaller screens */
@@ -234,7 +234,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 500px) {
+@media (max-width: 568px) {
     header {
         flex-direction: column;
         text-align: center;
