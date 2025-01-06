@@ -172,7 +172,7 @@ nav a:hover {
 @media (max-width: 768px) {
     .gallery-item {
         width: 230px;
-        height: 320px;
+        height: 350px;
         border-radius: 110px 110px 0 0;
     }
 
@@ -187,7 +187,7 @@ nav a:hover {
 @media (max-width: 480px) {
     .gallery-item {
         width: 200px;
-        height: 250px;
+        height: 290px;
         border-radius: 100px 100px 0 0;
     }
 
