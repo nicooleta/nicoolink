@@ -21,8 +21,7 @@ body {
     font-family: var(--body-font);
     background-color: var(--primary-color);
     color: var(--light-color);
-    line-height: 1.6;
-    cursor: url(https://i.postimg.cc/BbvM89kP/cursor-6.png), auto;
+    line-height: 1.6; cursor:url(https://i.postimg.cc/BbvM89kP/cursor-6.png), auto;
 }
 
 /* Header Section */
@@ -67,37 +66,37 @@ nav a:hover {
                 url(https://i.postimg.cc/FR1xKdky/banter-1.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
-    height: 400px; /* Reduced height for better visibility */
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .hero h1 {
     font-family: var(--title-font);
-    font-size: 2.5rem; /* Reduced title size */
-    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
-    font-size: 1rem; /* Adjusted subtitle size */
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Hero Button */
 .hero .book-now {
     display: inline-block;
-    padding: 0.6rem 1.5rem;
+    padding: 0.8rem 2rem;
     background-color: var(--accent-color);
     color: var(--light-color);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family: var(--title-font);
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -123,47 +122,62 @@ nav a:hover {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     justify-content: center;
     margin: 0 auto;
     max-width: 1000px;
 }
 
-/* ====== GALLERY ITEM ====== */
 .gallery-item {
-    position: relative;
-    width: 272px; /* Frame width */
-    height: 380px; /* Frame height */
+    background-color: #1f1f1f;
     overflow: hidden;
+    width: 250px;
+    aspect-ratio: 4 / 5;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* ====== GALLERY ITEM WITH SMALLER IMAGE INSIDE FRAME ====== */
+.gallery-item {
+    position: relative; /* Enable positioning for the frame */
+    width: 272px; /* Match the frame width */
+    height: 380px; /* Match the frame height */
+    overflow: hidden; /* Prevent overflow */
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    border-radius: 125px 125px 0 0; /* Arch shape */
+    border-radius: 125px 125px 0 0; /* Arch shape matches the frame */
 }
 
+/* Smaller Arch Image Inside the Frame */
 .gallery-item img {
-    width: 250px; /* Image width = 92% of frame */
-    height: 350px; /* Image height = 92% of frame */
-    object-fit: cover;
+    width: 230px; /* Smaller width for the image */
+    height: 291.64px; /* Smaller height for the image */
+    object-fit: cover; /* Ensures proper scaling */
     display: block;
-    border-radius: 125px 125px 0 0;
-    z-index: 1;
+    border-radius: 125px 125px 0 0; /* Arch shape */
+    z-index: 1; /* Ensures the image stays below the frame */
 }
 
-/* Frame Overlay */
+/* Frame Overlay (Custom Frame Applied to All Images) */
 .gallery-item::before {
     content: "";
     background: url('https://i.postimg.cc/C1N4h3Nq/Frame-1.png') no-repeat center center;
-    background-size: contain;
+    background-size: contain; /* Ensures the frame aligns properly */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
-    z-index: 2;
+    pointer-events: none; /* Prevents interference with clicks */
+    z-index: 2; /* Ensures the frame is above the image */
 }
 
 /* ====== RESPONSIVE DESIGN FOR GALLERY ITEM ====== */
