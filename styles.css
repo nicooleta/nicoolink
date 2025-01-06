@@ -179,49 +179,61 @@ nav a:hover {
 }
 
 /* ====== RESPONSIVE DESIGN FOR GALLERY ITEM ====== */
+/* ====== RESPONSIVE DESIGN FOR GALLERY ITEM ====== */
 @media (max-width: 768px) {
     .gallery-grid {
-        grid-template-columns: 1fr; /* One column per row */
-        gap: 1rem;
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 1.5rem; /* Increased gap for clarity */
         justify-content: center;
     }
 
     .gallery-item {
-        width: 230px; /* Adjust to match mobile proportions */
-        height: 291.64px;
-        border-radius: 125px 125px 0 0;
+        width: 272px; /* Frame matches desktop size for consistency */
+        height: 380px; /* Maintains aspect ratio */
+        border-radius: 125px 125px 0 0; /* Arch shape consistency */
+        margin: 0 auto; /* Center the item */
     }
 
     .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 230px; /* Consistent image size */
+        height: 291.64px; /* Proportional height */
+        object-fit: cover; /* Prevent stretching */
         border-radius: 125px 125px 0 0;
+        display: block;
     }
 
     .gallery-item::before {
-        background-size: contain;
+        content: "";
+        background: url('https://i.postimg.cc/C1N4h3Nq/Frame-1.png') no-repeat center center;
+        background-size: contain; /* Ensures proper scaling */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 2;
     }
 }
 
+/* ====== SMALLER MOBILE DEVICES (e.g., iPhone SE) ====== */
 @media (max-width: 480px) {
     .gallery-item {
-        width: 200px; /* Slightly smaller for smaller devices */
-        height: 260px;
-        border-radius: 100px 100px 0 0;
+        width: 230px; /* Slightly smaller frame for small screens */
+        height: 320px; /* Proportional adjustment */
+        border-radius: 110px 110px 0 0; /* Adjust arch shape */
     }
 
     .gallery-item img {
-        width: 100%;
-        height: 100%;
-        border-radius: 100px 100px 0 0;
+        width: 200px; /* Scaled image */
+        height: 270px; /* Proportional height */
+        border-radius: 110px 110px 0 0;
     }
 
     .gallery-item::before {
         background-size: contain;
     }
 }
-
 
 /* Additional Book Now Button */
 .book-now.bottom {
