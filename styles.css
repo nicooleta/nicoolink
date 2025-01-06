@@ -206,8 +206,8 @@ nav a:hover {
     }
 
     .gallery-item img {
-        width: 270px;
-        height: 337.5px;
+        width: 250px;
+        height: 312.5px;
         border-radius: 192.5px 192.5px 0 0;
     }
 }
