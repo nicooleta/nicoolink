@@ -185,14 +185,14 @@ nav a:hover {
 /* Tablets and Small Desktops (≤768px) */
 @media (max-width: 768px) {
     .gallery-item {
-        width: 230px;
-        height: 350px;
+        width: 330px;
+        height: 502.17px;
         border-radius: 110px 110px 0 0;
     }
 
     .gallery-item img {
-        width: 211.6px;
-        height: 294.4px;
+        width: 311.6px;
+        height: 433.53px;
         border-radius: 110px 110px 0 0;
     }
 }
@@ -200,8 +200,8 @@ nav a:hover {
 /* Smaller Mobile Devices (≤480px) */
 @media (max-width: 480px) {
     .gallery-item {
-        width: 230px;
-        height: 333.5px;
+        width: 330px;
+        height: 478.5px;
         border-radius: 100px 100px 0 0;
     }
 
@@ -215,14 +215,14 @@ nav a:hover {
 /* Ultra Small Devices (≤375px) */
 @media (max-width: 375px) {
     .gallery-item {
-        width: 200px;
-        height: 277.78px;
+        width: 300px;
+        height: 416.67px;
         border-radius: 90px 90px 0 0;
     }
 
     .gallery-item img {
-        width: 175.6px;
-        height: 219.5px;
+        width: 275.6px;
+        height: 344.5px;
         border-radius: 90px 90px 0 0;
     }
 }
