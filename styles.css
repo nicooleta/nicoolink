@@ -130,7 +130,7 @@ nav a:hover {
     max-width: 1000px;
 }
 
-/* Gallery Item with Adjusted Frame and Image */
+/* ====== GALLERY ITEM ====== */
 .gallery-item {
     position: relative;
     width: 272px; /* Frame width */
@@ -144,14 +144,15 @@ nav a:hover {
 }
 
 .gallery-item img {
-    width: 250px; /* Adjusted to fit the frame better */
-    height: 350px; /* Adjusted height */
+    width: 250px; /* Image width = 92% of frame */
+    height: 350px; /* Image height = 92% of frame */
     object-fit: cover;
     display: block;
     border-radius: 125px 125px 0 0;
     z-index: 1;
 }
 
+/* Frame Overlay */
 .gallery-item::before {
     content: "";
     background: url('https://i.postimg.cc/C1N4h3Nq/Frame-1.png') no-repeat center center;
@@ -165,72 +166,50 @@ nav a:hover {
     z-index: 2;
 }
 
-/* RESPONSIVE DESIGN */
+/* ====== RESPONSIVE DESIGN FOR GALLERY ITEM ====== */
 
 /* Tablets and Small Desktops (≤768px) */
 @media (max-width: 768px) {
-    .hero {
-        height: 350px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
     .gallery-item {
-        width: 250px;
-        height: 350px;
+        width: 230px;
+        height: 320px;
+        border-radius: 110px 110px 0 0;
     }
 
     .gallery-item img {
-        width: 230px;
-        height: 320px;
+        width: 211.6px;
+        height: 294.4px;
+        border-radius: 110px 110px 0 0;
     }
 }
 
 /* Smaller Mobile Devices (≤480px) */
 @media (max-width: 480px) {
-    .hero {
-        height: 300px;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 0.8rem;
-    }
-
     .gallery-item {
-        width: 220px;
-        height: 320px;
-        border-radius: 110px 110px 0 0;
+        width: 200px;
+        height: 250px;
+        border-radius: 100px 100px 0 0;
     }
 
     .gallery-item img {
-        width: 200px;
-        height: 290px;
-        border-radius: 110px 110px 0 0;
+        width: 184px;
+        height: 230px;
+        border-radius: 100px 100px 0 0;
     }
 }
 
 /* Ultra Small Devices (≤375px) */
 @media (max-width: 375px) {
     .gallery-item {
-        width: 200px;
-        height: 290px;
-        border-radius: 100px 100px 0 0;
+        width: 180px;
+        height: 225px;
+        border-radius: 90px 90px 0 0;
     }
 
     .gallery-item img {
-        width: 180px;
-        height: 260px;
-        border-radius: 100px 100px 0 0;
+        width: 165.6px;
+        height: 207px;
+        border-radius: 90px 90px 0 0;
     }
 }
 
