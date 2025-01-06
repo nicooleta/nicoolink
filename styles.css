@@ -21,7 +21,7 @@ body {
     font-family: var(--body-font);
     background-color: var(--primary-color);
     color: var(--light-color);
-    line-height: 1.6; 
+    line-height: 1.6;
     cursor: url(https://i.postimg.cc/BbvM89kP/cursor-6.png), auto;
 }
 
@@ -67,37 +67,37 @@ nav a:hover {
                 url(https://i.postimg.cc/FR1xKdky/banter-1.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
+    height: 400px; /* Reduced height for better visibility */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .hero h1 {
     font-family: var(--title-font);
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Reduced title size */
+    margin-bottom: 0.5rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1rem; /* Adjusted subtitle size */
+    margin-bottom: 1.5rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Hero Button */
 .hero .book-now {
     display: inline-block;
-    padding: 0.8rem 2rem;
+    padding: 0.6rem 1.5rem;
     background-color: var(--accent-color);
     color: var(--light-color);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: var(--title-font);
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -123,17 +123,17 @@ nav a:hover {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     justify-content: center;
     margin: 0 auto;
     max-width: 1000px;
 }
 
-/* ====== GALLERY ITEM: DESKTOP ====== */
+/* Gallery Item with Adjusted Frame and Image */
 .gallery-item {
     position: relative;
-    width: 272px; /* Frame size */
+    width: 272px; /* Frame width */
     height: 380px; /* Frame height */
     overflow: hidden;
     display: flex;
@@ -144,8 +144,8 @@ nav a:hover {
 }
 
 .gallery-item img {
-    width: 230px; /* Image inside the frame */
-    height: 291.64px; /* Proportional height */
+    width: 250px; /* Adjusted to fit the frame better */
+    height: 350px; /* Adjusted height */
     object-fit: cover;
     display: block;
     border-radius: 125px 125px 0 0;
@@ -165,69 +165,72 @@ nav a:hover {
     z-index: 2;
 }
 
-/* ====== RESPONSIVE DESIGN FOR GALLERY ITEM ====== */
+/* RESPONSIVE DESIGN */
+
 /* Tablets and Small Desktops (≤768px) */
 @media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: 1fr; /* One image per row */
-        gap: 1.5rem; /* Space between items */
-        justify-content: center;
+    .hero {
+        height: 350px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
     }
 
     .gallery-item {
         width: 250px;
         height: 350px;
-        border-radius: 125px 125px 0 0;
-        margin: 0 auto;
     }
 
     .gallery-item img {
-        width: 220px;
-        height: 310px;
-        object-fit: cover;
-        border-radius: 125px 125px 0 0;
-    }
-
-    .gallery-item::before {
-        background-size: contain;
+        width: 230px;
+        height: 320px;
     }
 }
 
 /* Smaller Mobile Devices (≤480px) */
 @media (max-width: 480px) {
+    .hero {
+        height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+
     .gallery-item {
-        width: 200px;
-        height: 280px;
+        width: 220px;
+        height: 320px;
         border-radius: 110px 110px 0 0;
     }
 
     .gallery-item img {
-        width: 180px;
-        height: 250px;
+        width: 200px;
+        height: 290px;
         border-radius: 110px 110px 0 0;
-    }
-
-    .gallery-item::before {
-        background-size: contain;
     }
 }
 
 /* Ultra Small Devices (≤375px) */
 @media (max-width: 375px) {
     .gallery-item {
-        width: 180px;
-        height: 240px;
+        width: 200px;
+        height: 290px;
         border-radius: 100px 100px 0 0;
     }
 
     .gallery-item img {
-        width: 160px;
-        height: 220px;
+        width: 180px;
+        height: 260px;
         border-radius: 100px 100px 0 0;
-    }
-
-    .gallery-item::before {
-        background-size: contain;
     }
 }
 
@@ -261,4 +264,5 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid var(--accent-color);
 }
+
 
