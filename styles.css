@@ -200,14 +200,14 @@ nav a:hover {
 /* Smaller Mobile Devices (≤480px) */
 @media (max-width: 480px) {
     .gallery-item {
-        width: 200px;
-        height: 290px;
+        width: 230px;
+        height: 333.5px;
         border-radius: 100px 100px 0 0;
     }
 
     .gallery-item img {
-        width: 164px;
-        height: 205px;
+        width: 184px;
+        height: 230px;
         border-radius: 100px 100px 0 0;
     }
 }
@@ -215,14 +215,14 @@ nav a:hover {
 /* Ultra Small Devices (≤375px) */
 @media (max-width: 375px) {
     .gallery-item {
-        width: 180px;
-        height: 250px;
+        width: 200px;
+        height: 277.78px;
         border-radius: 90px 90px 0 0;
     }
 
     .gallery-item img {
-        width: 155.6px;
-        height: 194.5px;
+        width: 175.6px;
+        height: 219.5px;
         border-radius: 90px 90px 0 0;
     }
 }
