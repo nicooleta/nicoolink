@@ -143,80 +143,85 @@ nav a:hover {
     object-fit: cover;
     display: block;
 }
-/* ====== GALLERY ITEM WITH SMALLER IMAGE INSIDE FRAME ====== */
+/* ====== GALLERY ITEM: DESKTOP ====== */
 .gallery-item {
-    position: relative; /* Enable positioning for the frame */
-    width: 272px; /* Match the frame width */
-    height: 380px; /* Match the frame height */
-    overflow: hidden; /* Prevent overflow */
+    position: relative;
+    width: 272px; /* Frame size */
+    height: 380px; /* Frame height */
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    border-radius: 125px 125px 0 0; /* Arch shape matches the frame */
-}
-
-/* Smaller Arch Image Inside the Frame */
-.gallery-item img {
-    width: 230px; /* Smaller width for the image */
-    height: 291.64px; /* Smaller height for the image */
-    object-fit: cover; /* Ensures proper scaling */
-    display: block;
     border-radius: 125px 125px 0 0; /* Arch shape */
-    z-index: 1; /* Ensures the image stays below the frame */
 }
 
-/* Frame Overlay (Custom Frame Applied to All Images) */
+.gallery-item img {
+    width: 230px; /* Image inside the frame */
+    height: 291.64px; /* Proportional height */
+    object-fit: cover;
+    display: block;
+    border-radius: 125px 125px 0 0;
+    z-index: 1;
+}
+
 .gallery-item::before {
     content: "";
     background: url('https://i.postimg.cc/C1N4h3Nq/Frame-1.png') no-repeat center center;
-    background-size: contain; /* Ensures the frame aligns properly */
+    background-size: contain;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Prevents interference with clicks */
-    z-index: 2; /* Ensures the frame is above the image */
+    pointer-events: none;
+    z-index: 2;
 }
 
 /* ====== RESPONSIVE DESIGN FOR GALLERY ITEM ====== */
 @media (max-width: 768px) {
     .gallery-grid {
         grid-template-columns: 1fr; /* One column per row */
-        gap: 1rem; /* Space between items */
+        gap: 1rem;
         justify-content: center;
     }
 
     .gallery-item {
-        width: 230px; /* Match image size */
-        height: 291.64px; /* Adjusted proportional height */
-        border-radius: 125px 125px 0 0; /* Maintain arch shape */
-        margin: 0 auto; /* Center the gallery item */
+        width: 230px; /* Adjust to match mobile proportions */
+        height: 291.64px;
+        border-radius: 125px 125px 0 0;
     }
 
     .gallery-item img {
-        width: 100%; /* Fill the container */
-        height: 100%; /* Fill the container */
-        object-fit: cover; /* Proper image scaling */
-        display: block;
-        border-radius: 125px 125px 0 0; /* Arch shape matches frame */
-        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 125px 125px 0 0;
     }
 
     .gallery-item::before {
-        content: "";
-        background: url('https://i.postimg.cc/C1N4h3Nq/Frame-1.png') no-repeat center center;
-        background-size: contain; /* Frame aligns correctly */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none; /* Prevent click interference */
-        z-index: 2;
+        background-size: contain;
     }
 }
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 200px; /* Slightly smaller for smaller devices */
+        height: 260px;
+        border-radius: 100px 100px 0 0;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100px 100px 0 0;
+    }
+
+    .gallery-item::before {
+        background-size: contain;
+    }
+}
+
 
 /* Additional Book Now Button */
 .book-now.bottom {
