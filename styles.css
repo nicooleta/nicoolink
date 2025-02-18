@@ -62,7 +62,7 @@ nav a:hover {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
                 url(https://i.postimg.cc/bvKZF4rZ/Untitled-Artwork.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed; /* Works well on desktop */
