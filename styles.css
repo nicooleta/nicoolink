@@ -62,11 +62,11 @@ nav a:hover {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
+    background:
                 url(https://i.postimg.cc/bvKZF4rZ/Untitled-Artwork.jpg) no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed; /* Works well on desktop */
-    height: 400px; /* Optimal desktop height */
+    background-size:100% 100%;
+    background-attachment: flex; /* Works well on desktop */
+    height: 600px; /* Optimal desktop height */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,7 +176,7 @@ nav a:hover {
 }
 /* Gallery Section */
 .gallery {
-    padding: 4rem 2rem;
+    padding: 0 2rem 4rem 2rem; /* Removes top padding, keeps side and bottom padding */
     text-align: center;
     background-color: #1f1f1f;
 }
