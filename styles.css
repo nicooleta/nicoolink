@@ -66,7 +66,7 @@ nav a:hover {
                 url(https://i.postimg.cc/RCggBpLP/banner.jpg) no-repeat center center;
     background-size:100% 100%;
     background-attachment: flex; /* Works well on desktop */
-    height: 600px; /* Optimal desktop height */
+    height: 800px; /* Optimal desktop height */
     display: flex;
     flex-direction: column;
     align-items: center;
